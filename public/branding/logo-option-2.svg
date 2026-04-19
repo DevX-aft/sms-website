@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Dzidzo SMS  shield emblem option 2">
+  <defs>
+    <linearGradient id="lo2g" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="lo2s" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#lo2s)" d="M48 6 L86 18 V52c0 18-14 32-38 38 C24 84 10 70 10 52V18 L48 6z" stroke="#334155" stroke-width="1.5"/>
+  <path fill="url(#lo2g)" d="M48 14 L78 23 V50c0 14-11 26-30 31-19-5-30-17-30-31V23 L48 14z"/>
+  <path fill="#ecfdf5" d="M38 34h20v4H38v-4zm0 10h14v4H38v-4zm4-18h12v3H42v-3z" opacity=".92"/>
+  <circle cx="48" cy="58" r="6" fill="none" stroke="#ecfdf5" stroke-width="2" opacity=".85"/>
+  <path fill="none" stroke="#ecfdf5" stroke-width="1.8" stroke-linecap="round" d="M45 58l3 3 6-7" opacity=".85"/>
+</svg>

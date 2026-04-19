@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Dzidzo SMS  monogram option 3">
+  <defs>
+    <linearGradient id="lo3r" x1="30%" y1="15%" x2="70%" y2="85%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="lo3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <circle cx="48" cy="48" r="44" fill="url(#lo3r)" stroke="#334155" stroke-width="2"/>
+  <circle cx="48" cy="48" r="38" fill="none" stroke="#10b981" stroke-width="1" opacity=".35"/>
+  <text x="48" y="58" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="url(#lo3d)">D</text>
+  <text x="48" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" letter-spacing="0.35em" fill="#94a3b8">SMS</text>
+</svg>

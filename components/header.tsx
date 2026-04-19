@@ -4,13 +4,17 @@ import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#features", label: "Features" },
   { href: "#why-choose-us", label: "Why Dzidzo" },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
 ]
+
+const LOGIN_URL = process.env.NEXT_PUBLIC_LOGIN_URL?.trim() || ""
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -124,7 +128,7 @@ export function Header() {
         </Link>
 
         <nav
-          className="hidden md:flex items-center gap-8"
+          className="hidden md:flex items-center gap-6 lg:gap-8"
           role="navigation"
           aria-label="Main navigation"
         >
@@ -148,6 +152,26 @@ export function Header() {
             </Link>
           ))}
         </nav>
+
+        <div className="hidden md:flex items-center gap-2 lg:gap-3 shrink-0">
+          {LOGIN_URL ? (
+            <Button variant="ghost" size="sm" className="text-gray-200 hover:text-white" asChild>
+              <a href={LOGIN_URL} target="_blank" rel="noopener noreferrer">
+                Log in
+              </a>
+            </Button>
+          ) : (
+            <Button variant="ghost" size="sm" className="text-gray-200 hover:text-white" asChild>
+              <Link href="#contact">Request access</Link>
+            </Button>
+          )}
+          <Button variant="outline" size="sm" className="border-primary/40 bg-transparent text-white hover:bg-white/10" asChild>
+            <Link href="#contact">Get a quote</Link>
+          </Button>
+          <Button size="sm" className="font-semibold" asChild>
+            <Link href="/demo">Book a demo</Link>
+          </Button>
+        </div>
 
         <button
           ref={menuButtonRef}
@@ -191,6 +215,37 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <div className="mt-4 flex flex-col gap-3 border-t border-slate-800 pt-6">
+            <Button className="w-full font-semibold" asChild>
+              <Link href="/demo" tabIndex={isMenuOpen ? 0 : -1} onClick={() => setIsMenuOpen(false)}>
+                Book a demo
+              </Link>
+            </Button>
+            <Button variant="outline" className="w-full border-primary/40 bg-transparent text-white" asChild>
+              <Link href="#contact" tabIndex={isMenuOpen ? 0 : -1} onClick={() => setIsMenuOpen(false)}>
+                Get a quote
+              </Link>
+            </Button>
+            {LOGIN_URL ? (
+              <Button variant="secondary" className="w-full" asChild>
+                <a
+                  href={LOGIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabIndex={isMenuOpen ? 0 : -1}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Log in
+                </a>
+              </Button>
+            ) : (
+              <Button variant="secondary" className="w-full" asChild>
+                <Link href="#contact" tabIndex={isMenuOpen ? 0 : -1} onClick={() => setIsMenuOpen(false)}>
+                  Request access
+                </Link>
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </header>

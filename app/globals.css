@@ -262,4 +262,23 @@
   .border {
     border-color: hsla(var(--border));
   }
+
+  .readability-enforced {
+    line-height: 1.65;
+  }
+
+  .readability-enforced :is(p, li, a, button, label, input, textarea, select) {
+    font-size: clamp(1.05rem, 1rem + 0.25vw, 1.25rem) !important;
+    line-height: 1.7;
+    letter-spacing: 0.005em;
+  }
+
+  .readability-enforced :is(h1, h2, h3) {
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .readability-enforced :is(h4, h5, h6) {
+    line-height: 1.3;
+  }
 }

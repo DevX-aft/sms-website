@@ -55,7 +55,7 @@ export function AboutSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <span className="text-emerald-400 text-sm font-semibold tracking-wider uppercase">
+          <span className="text-emerald-400 text-base font-semibold tracking-wider uppercase md:text-lg">
             What is Dzidzo SMS?
           </span>
           <h2
@@ -91,15 +91,15 @@ export function AboutSection() {
               }`}
               style={{ transitionDelay: feature.delay }}
             >
-              <div className="h-full rounded-3xl border border-emerald-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+              <div className="h-full rounded-3xl border border-emerald-100 bg-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                 <div
                   className={`w-14 h-14 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}
                 >
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
 
-                <h3 className="text-2xl font-bold text-foreground mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                <h3 className="mb-4 text-3xl font-bold text-foreground">{feature.title}</h3>
+                <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">{feature.description}</p>
               </div>
             </div>
           ))}
@@ -111,8 +111,8 @@ export function AboutSection() {
           }`}
         >
           <div className="p-12 rounded-3xl bg-gradient-to-r from-emerald-100/70 to-teal-100/70 border border-emerald-300/40 backdrop-blur-md shadow-xl">
-            <h3 className="text-3xl font-bold text-foreground mb-6">Our promise</h3>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <h3 className="mb-6 text-4xl font-bold text-foreground">Our promise</h3>
+            <p className="text-xl leading-relaxed text-muted-foreground md:text-2xl">
               Dzidzo SMS — built for our schools, by our own, to make education management simpler,
               smarter, and truly Zimbabwean.
             </p>

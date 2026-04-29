@@ -106,7 +106,7 @@ export function SolutionsSection() {
     <section ref={sectionRef} id="features" className="py-32 bg-white relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <span className="text-emerald-400 text-sm font-semibold tracking-wider uppercase">Key features</span>
+          <span className="text-emerald-400 text-base font-semibold tracking-wider uppercase md:text-lg">Key features</span>
           <h2
             className={`text-5xl md:text-7xl font-bold mb-8 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -140,23 +140,23 @@ export function SolutionsSection() {
               }`}
               style={{ transitionDelay: item.delay }}
             >
-              <CardHeader className="pb-4 relative z-10">
+              <CardHeader className="relative z-10 pb-4">
                 <div
                   className={`w-14 h-14 bg-gradient-to-r ${item.gradient} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 shadow-sm`}
                 >
                   <item.icon size={28} weight="duotone" className="text-white" />
                 </div>
                 <div className="flex items-start justify-between gap-2 flex-wrap">
-                  <CardTitle className="text-foreground text-xl group-hover:text-emerald-600 transition-colors">
+                  <CardTitle className="text-2xl text-foreground transition-colors group-hover:text-emerald-600">
                     {item.title}
                   </CardTitle>
                   {"badge" in item && item.badge ? (
-                    <span className="text-xs font-semibold uppercase tracking-wide text-emerald-700 border border-emerald-300 rounded-full px-2 py-0.5 shrink-0">
+                    <span className="shrink-0 rounded-full border border-emerald-300 px-2 py-0.5 text-sm font-semibold uppercase tracking-wide text-emerald-700">
                       {item.badge}
                     </span>
                   ) : null}
                 </div>
-                <CardDescription className="text-muted-foreground group-hover:text-foreground transition-colors">
+                <CardDescription className="text-base text-muted-foreground transition-colors group-hover:text-foreground md:text-lg">
                   {item.description}
                 </CardDescription>
               </CardHeader>
@@ -164,10 +164,7 @@ export function SolutionsSection() {
               <CardContent className="relative z-10">
                 <ul className="space-y-3 mb-6">
                   {item.bullets.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="text-emerald-700 text-sm flex items-center group-hover:text-foreground transition-colors"
-                    >
+                    <li key={featureIndex} className="flex items-center text-base text-emerald-700 transition-colors group-hover:text-foreground md:text-lg">
                       <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-3" />
                       {feature}
                     </li>

@@ -52,7 +52,7 @@ export function WhyChooseUsSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <span className="block text-transparent bg-gradient-to-r from-emerald-300 to-teal-400 bg-clip-text text-lg font-semibold uppercase tracking-widest mb-3">
+          <span className="mb-3 block bg-gradient-to-r from-emerald-300 to-teal-400 bg-clip-text text-xl font-semibold uppercase tracking-widest text-transparent">
             Why Dzidzo SMS
           </span>
           <h2
@@ -95,11 +95,11 @@ export function WhyChooseUsSection() {
                 >
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 text-foreground drop-shadow">{feature.title}</h3>
-                <p className="text-muted-foreground mb-5">{feature.description}</p>
+                <h3 className="mb-2 text-3xl font-bold text-foreground drop-shadow">{feature.title}</h3>
+                <p className="mb-5 text-lg text-muted-foreground md:text-xl">{feature.description}</p>
                 <ul className="space-y-2 mb-6">
                   {feature.benefits.map((b, j) => (
-                    <li key={j} className="flex items-center text-emerald-700 text-sm">
+                    <li key={j} className="flex items-center text-base text-emerald-700 md:text-lg">
                       <CheckCircle className="w-4 h-4 mr-2 text-emerald-400 shrink-0" />
                       {b}
                     </li>
@@ -124,8 +124,8 @@ export function WhyChooseUsSection() {
               key={k}
               className="text-center p-6 rounded-2xl bg-card/70 border border-border backdrop-blur-sm"
             >
-              <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">{stat.number}</div>
-              <div className="text-muted-foreground text-sm">{stat.label}</div>
+              <div className="mb-2 text-4xl font-bold text-foreground md:text-5xl">{stat.number}</div>
+              <div className="text-base text-muted-foreground md:text-lg">{stat.label}</div>
             </div>
           ))}
         </div>

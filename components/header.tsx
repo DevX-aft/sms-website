@@ -116,7 +116,7 @@ export function Header() {
           </div>
 
           <span
-            className="text-foreground font-bold text-xl tracking-tight group-hover:text-emerald-500 transition-all duration-300 whitespace-nowrap overflow-hidden"
+            className="overflow-hidden whitespace-nowrap text-2xl font-bold tracking-tight text-foreground transition-all duration-300 group-hover:text-emerald-500"
             style={{
               opacity: textOpacity,
               transform: `translateX(${Math.max(-20, -scrollY / 10)}px)`,
@@ -136,7 +136,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`relative text-muted-foreground hover:text-emerald-600 transition-colors duration-200 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded group
+              className={`relative rounded py-2 text-lg text-muted-foreground transition-colors duration-200 group hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500
                 ${item.href.endsWith(currentHash) ? "text-emerald-600 font-semibold" : ""}
               `}
             >
@@ -155,20 +155,20 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-2 lg:gap-3 shrink-0">
           {LOGIN_URL ? (
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
+            <Button variant="ghost" size="sm" className="text-base text-muted-foreground hover:text-foreground" asChild>
               <a href={LOGIN_URL} target="_blank" rel="noopener noreferrer">
                 Log in
               </a>
             </Button>
           ) : (
-            <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
+            <Button variant="ghost" size="sm" className="text-base text-muted-foreground hover:text-foreground" asChild>
               <Link href="/#contact">Request access</Link>
             </Button>
           )}
-          <Button variant="outline" size="sm" className="border-primary/40 bg-transparent text-foreground hover:bg-accent" asChild>
+          <Button variant="outline" size="sm" className="border-primary/40 bg-transparent text-base text-foreground hover:bg-accent" asChild>
             <Link href="/#contact">Get a quote</Link>
           </Button>
-          <Button size="sm" className="font-semibold" asChild>
+          <Button size="sm" className="text-base font-semibold" asChild>
             <Link href="/demo">Book a demo</Link>
           </Button>
         </div>
@@ -208,7 +208,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-lg text-muted-foreground hover:text-emerald-600 transition-colors duration-200 py-3 px-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              className="rounded px-2 py-3 text-xl text-muted-foreground transition-colors duration-200 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
               tabIndex={isMenuOpen ? 0 : -1}
               onClick={() => setIsMenuOpen(false)}
             >

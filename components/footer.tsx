@@ -30,15 +30,15 @@ export function Footer() {
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
             </div>
             <div>
-              <span className="text-foreground font-bold text-xl block group-hover:text-emerald-600 transition-colors">
+              <span className="block text-2xl font-bold text-foreground transition-colors group-hover:text-emerald-600">
                 Dzidzo SMS
               </span>
-              <span className="text-muted-foreground text-sm">School management — by Afrainity Technologies</span>
+              <span className="text-base text-muted-foreground md:text-lg">School management — by Afrainity Technologies</span>
             </div>
           </div>
 
           <div className="text-center md:text-right">
-            <p className="text-muted-foreground mb-2">© {new Date().getFullYear()} Afrainity Technologies. All rights reserved.</p>
+            <p className="mb-2 text-base text-muted-foreground md:text-lg">© {new Date().getFullYear()} Afrainity Technologies. All rights reserved.</p>
           </div>
         </div>
 
@@ -47,9 +47,9 @@ export function Footer() {
             onClick={scrollToTop}
             variant="outline"
             size="sm"
-            className="group border-emerald-500/40 text-emerald-700 hover:bg-emerald-100 rounded-full backdrop-blur-sm hover:border-emerald-500 transition-all duration-300 hover:scale-105"
+            className="group rounded-full border-emerald-500/40 text-base text-emerald-700 transition-all duration-300 hover:scale-105 hover:border-emerald-500 hover:bg-emerald-100 backdrop-blur-sm"
           >
-            <ArrowUp className="w-4 h-4 mr-2 group-hover:-translate-y-1 transition-transform" />
+            <ArrowUp className="mr-2 h-5 w-5 transition-transform group-hover:-translate-y-1" />
             Back to top
           </Button>
         </div>

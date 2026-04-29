@@ -49,14 +49,14 @@ export function ContactSection() {
       <div className="container mx-auto px-6 max-w-4xl w-full">
         <div className="text-center mb-16">
           <h2
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-6 transition-all duration-700 ${
+            className={`mb-6 text-5xl font-bold text-foreground transition-all duration-700 md:text-6xl ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             Contact us
           </h2>
           <p
-            className={`text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-150 ${
+            className={`mx-auto max-w-2xl text-xl leading-relaxed text-muted-foreground transition-all duration-700 delay-150 md:text-2xl ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -77,9 +77,9 @@ export function ContactSection() {
               HIT
             </div>
             <div className="text-foreground text-left">
-              <p className="font-medium text-muted-foreground text-sm">Proudly incubated by</p>
-              <p className="text-lg font-bold">Harare Institute of Technology</p>
-              <p className="text-sm text-muted-foreground mt-1">Innovation Hub — Belvedere, Harare</p>
+              <p className="text-base font-medium text-muted-foreground">Proudly incubated by</p>
+              <p className="text-xl font-bold md:text-2xl">Harare Institute of Technology</p>
+              <p className="mt-1 text-base text-muted-foreground md:text-lg">Innovation Hub — Belvedere, Harare</p>
             </div>
           </div>
         </div>
@@ -100,10 +100,10 @@ export function ContactSection() {
                   <info.icon className="w-6 h-6 text-emerald-400" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-medium text-muted-foreground mb-1 uppercase tracking-wide">
+                  <div className="mb-1 text-base font-medium uppercase tracking-wide text-muted-foreground">
                     {info.label}
                   </div>
-                  <div className="text-base text-foreground font-medium leading-relaxed break-words">
+                  <div className="text-lg font-medium leading-relaxed text-foreground break-words md:text-xl">
                     {info.value}
                   </div>
                 </div>
@@ -112,7 +112,7 @@ export function ContactSection() {
           </div>
 
           <p
-            className={`text-center text-muted-foreground text-sm transition-all duration-700 delay-500 ${
+            className={`text-center text-base text-muted-foreground transition-all duration-700 delay-500 md:text-lg ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >

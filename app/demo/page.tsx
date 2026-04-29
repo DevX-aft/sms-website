@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function DemoPage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="readability-enforced min-h-screen bg-background">
       <Header />
       <section className="border-b border-border/40 bg-muted/20">
         <div className="container mx-auto max-w-lg px-4 py-14 md:py-20">

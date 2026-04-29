@@ -10,7 +10,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-slate-900 border-t border-emerald-500/20 py-12 relative overflow-hidden">
+    <footer className="bg-card border-t border-emerald-300/30 py-12 relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl" />
@@ -30,15 +30,15 @@ export function Footer() {
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
             </div>
             <div>
-              <span className="text-white font-bold text-xl block group-hover:text-emerald-300 transition-colors">
+              <span className="text-foreground font-bold text-xl block group-hover:text-emerald-600 transition-colors">
                 Dzidzo SMS
               </span>
-              <span className="text-gray-400 text-sm">School management — by Afrainity Technologies</span>
+              <span className="text-muted-foreground text-sm">School management — by Afrainity Technologies</span>
             </div>
           </div>
 
           <div className="text-center md:text-right">
-            <p className="text-gray-400 mb-2">© {new Date().getFullYear()} Afrainity Technologies. All rights reserved.</p>
+            <p className="text-muted-foreground mb-2">© {new Date().getFullYear()} Afrainity Technologies. All rights reserved.</p>
           </div>
         </div>
 
@@ -47,7 +47,7 @@ export function Footer() {
             onClick={scrollToTop}
             variant="outline"
             size="sm"
-            className="group border-emerald-500/50 text-emerald-300 hover:bg-emerald-500/10 rounded-full backdrop-blur-sm hover:border-emerald-400 transition-all duration-300 hover:scale-105"
+            className="group border-emerald-500/40 text-emerald-700 hover:bg-emerald-100 rounded-full backdrop-blur-sm hover:border-emerald-500 transition-all duration-300 hover:scale-105"
           >
             <ArrowUp className="w-4 h-4 mr-2 group-hover:-translate-y-1 transition-transform" />
             Back to top

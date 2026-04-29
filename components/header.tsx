@@ -77,8 +77,8 @@ export function Header() {
 
   const isScrolled = scrollY > 32
   const textOpacity = Math.max(0, 1 - scrollY / 120)
-  const logoScale = Math.max(0.85, 1 - scrollY / 800)
-  const headerHeight = Math.max(60, 76 - scrollY / 20)
+  const logoScale = Math.max(0.9, 1 - scrollY / 900)
+  const headerHeight = Math.max(72, 88 - scrollY / 20)
 
   return (
     <header
@@ -99,19 +99,19 @@ export function Header() {
         <Link
           href="/"
           aria-label="Dzidzo SMS Home"
-          className="flex items-center gap-3 group relative"
+          className="group relative flex items-center gap-1.5"
         >
           <div
             className="relative transition-transform duration-300 ease-out"
             style={{ transform: `scale(${logoScale})` }}
           >
             <Image
-              src="/dzidzo-icon.svg"
+              src="/Dzidzo SMS2.png"
               alt="Dzidzo SMS"
-              width={40}
-              height={40}
+              width={56}
+              height={56}
               priority
-              className="h-10 w-10"
+              className="h-14 w-14"
             />
           </div>
 

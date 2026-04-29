@@ -21,7 +21,7 @@ export function Footer() {
           <div className="flex items-center space-x-3 mb-6 md:mb-0 group">
             <div className="relative w-10 h-10">
               <Image
-                src="/dzidzo-icon.svg"
+                src="/Dzidzo SMS2.png"
                 alt="Dzidzo SMS"
                 width={40}
                 height={40}

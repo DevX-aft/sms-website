@@ -24,14 +24,14 @@ export function HeroSection() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" aria-hidden />
 
       <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
-        <div className="mx-auto flex max-w-4xl flex-col gap-10 md:flex-row md:items-start md:gap-14 lg:max-w-5xl">
-          <div className="flex shrink-0 justify-center md:justify-start md:pt-2">
+        <div className="mx-auto flex max-w-4xl flex-col gap-6 md:flex-row md:items-start md:gap-6 lg:max-w-5xl">
+          <div className="flex shrink-0 justify-center md:-mr-1 md:justify-start md:pt-1">
             <Image
-              src="/dzidzo-icon.svg"
+              src="/Dzidzo SMS2.png"
               alt="Dzidzo SMS"
-              width={112}
-              height={112}
-              className="h-24 w-24 rounded-2xl md:h-28 md:w-28"
+              width={176}
+              height={176}
+              className="h-36 w-36 rounded-2xl md:h-44 md:w-44"
               priority
             />
           </div>

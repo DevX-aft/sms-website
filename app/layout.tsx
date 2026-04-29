@@ -4,7 +4,7 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Dzidzo SMS — School Management System',
   icons: {
-    icon: '/dzidzo-icon.svg',
+    icon: '/Dzidzo SMS2.png',
   },
   description:
     'Dzidzo School Management System — smart, homegrown software for Zimbabwean schools. Admissions, exams, WhatsApp for parents, and more. By Afrainity Technologies.',

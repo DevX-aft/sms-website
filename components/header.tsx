@@ -7,11 +7,11 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#features", label: "Features" },
-  { href: "#why-choose-us", label: "Why Dzidzo" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#features", label: "Features" },
+  { href: "/#why-choose-us", label: "Why Dzidzo" },
+  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 const LOGIN_URL = process.env.NEXT_PUBLIC_LOGIN_URL?.trim() || ""
@@ -137,7 +137,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={`relative text-muted-foreground hover:text-emerald-600 transition-colors duration-200 py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded group
-                ${currentHash === item.href ? "text-emerald-600 font-semibold" : ""}
+                ${item.href.endsWith(currentHash) ? "text-emerald-600 font-semibold" : ""}
               `}
             >
               {item.label}
@@ -145,7 +145,7 @@ export function Header() {
                 className={`
                   pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full
                   group-hover:w-full group-focus:w-full transition-all duration-300
-                  ${currentHash === item.href ? "w-full" : ""}
+                  ${item.href.endsWith(currentHash) ? "w-full" : ""}
                 `}
                 aria-hidden="true"
               />
@@ -162,11 +162,11 @@ export function Header() {
             </Button>
           ) : (
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
-              <Link href="#contact">Request access</Link>
+              <Link href="/#contact">Request access</Link>
             </Button>
           )}
           <Button variant="outline" size="sm" className="border-primary/40 bg-transparent text-foreground hover:bg-accent" asChild>
-            <Link href="#contact">Get a quote</Link>
+            <Link href="/#contact">Get a quote</Link>
           </Button>
           <Button size="sm" className="font-semibold" asChild>
             <Link href="/demo">Book a demo</Link>
@@ -222,7 +222,7 @@ export function Header() {
               </Link>
             </Button>
             <Button variant="outline" className="w-full border-primary/40 bg-transparent text-foreground" asChild>
-              <Link href="#contact" tabIndex={isMenuOpen ? 0 : -1} onClick={() => setIsMenuOpen(false)}>
+              <Link href="/#contact" tabIndex={isMenuOpen ? 0 : -1} onClick={() => setIsMenuOpen(false)}>
                 Get a quote
               </Link>
             </Button>
@@ -240,7 +240,7 @@ export function Header() {
               </Button>
             ) : (
               <Button variant="secondary" className="w-full" asChild>
-                <Link href="#contact" tabIndex={isMenuOpen ? 0 : -1} onClick={() => setIsMenuOpen(false)}>
+                <Link href="/#contact" tabIndex={isMenuOpen ? 0 : -1} onClick={() => setIsMenuOpen(false)}>
                   Request access
                 </Link>
               </Button>

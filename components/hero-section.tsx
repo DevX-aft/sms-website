@@ -60,7 +60,7 @@ export function HeroSection() {
                 <Link href="/demo">Book a demo</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="h-12 border-primary/35 bg-background px-8 text-base font-semibold hover:bg-muted/80">
-                <Link href="#contact">Get a quote</Link>
+                <Link href="/#contact">Get a quote</Link>
               </Button>
               {LOGIN_URL ? (
                 <Button asChild size="lg" variant="secondary" className="h-12 px-8 text-base font-semibold">
@@ -70,7 +70,7 @@ export function HeroSection() {
                 </Button>
               ) : (
                 <Button asChild size="lg" variant="secondary" className="h-12 px-8 text-base font-semibold">
-                  <Link href="#contact">Request access</Link>
+                  <Link href="/#contact">Request access</Link>
                 </Button>
               )}
             </div>

@@ -1,7 +1,14 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Quote } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const TESTIMONIALS = [
@@ -37,6 +44,8 @@ const TESTIMONIALS = [
 
 export function TestimonialsSection() {
   const [visible, setVisible] = useState(false)
+  const [api, setApi] = useState<CarouselApi>()
+  const [activeIndex, setActiveIndex] = useState(0)
   const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
@@ -49,6 +58,31 @@ export function TestimonialsSection() {
     return () => io.disconnect()
   }, [])
 
+  useEffect(() => {
+    if (!api) return
+    const onSelect = () => setActiveIndex(api.selectedScrollSnap())
+    onSelect()
+    api.on("select", onSelect)
+    api.on("reInit", onSelect)
+    return () => {
+      api.off("select", onSelect)
+      api.off("reInit", onSelect)
+    }
+  }, [api])
+
+  useEffect(() => {
+    if (!visible || !api) return
+    const timer = window.setInterval(() => api.scrollNext(), 4200)
+    return () => window.clearInterval(timer)
+  }, [visible, api])
+
+  const goTo = (nextIndex: number) => {
+    api?.scrollTo(nextIndex)
+  }
+
+  const next = () => api?.scrollNext()
+  const prev = () => api?.scrollPrev()
+
   return (
     <section
       ref={ref}
@@ -57,41 +91,85 @@ export function TestimonialsSection() {
     >
       <div className="container mx-auto px-4">
         <div
-          className={`mx-auto max-w-2xl text-center transition-all duration-700 ${
+          className={`mx-auto max-w-3xl text-center transition-all duration-700 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
             Trusted by school teams
           </h2>
-          <p className="mt-4 text-pretty text-muted-foreground md:text-lg">
+          <p className="mt-5 text-pretty text-lg text-muted-foreground md:text-xl">
             Voices from the roles that use the system every day — leadership, teaching, and
             technical operations.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {TESTIMONIALS.map((t, i) => (
-            <Card
-              key={t.name}
-              className={`border-border/60 bg-card/80 shadow-sm backdrop-blur-sm transition-all duration-700 ${
+        <div className="mx-auto mt-14 w-full max-w-5xl">
+          <div className="relative">
+            <Carousel
+              setApi={setApi}
+              opts={{ align: "start", loop: true }}
+              className={`transition-all duration-700 ${
                 visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
               }`}
-              style={{ transitionDelay: `${120 + i * 80}ms` }}
             >
-              <CardContent className="pt-8">
-                <Quote className="mb-4 h-8 w-8 text-primary/70" aria-hidden />
-                <blockquote className="text-pretty text-foreground leading-relaxed">
-                  “{t.quote}”
-                </blockquote>
-                <footer className="mt-6 border-t border-border/50 pt-4">
-                  <p className="font-semibold text-foreground">{t.name}</p>
-                  <p className="text-sm text-primary">{t.role}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{t.context}</p>
-                </footer>
-              </CardContent>
-            </Card>
-          ))}
+              <CarouselContent className="ml-0">
+                {TESTIMONIALS.map((t) => (
+                  <CarouselItem key={t.name} className="pl-0">
+                    <Card className="min-h-[360px] border-border/60 bg-card/85 shadow-sm backdrop-blur-sm">
+                      <CardContent className="pt-10">
+                        <Quote className="mb-5 h-9 w-9 text-primary/70" aria-hidden />
+                        <blockquote className="text-pretty text-xl text-foreground leading-relaxed md:text-2xl">
+                          “{t.quote}”
+                        </blockquote>
+                        <footer className="mt-8 border-t border-border/50 pt-5">
+                          <p className="text-lg font-semibold text-foreground md:text-xl">{t.name}</p>
+                          <p className="text-base text-primary md:text-lg">{t.role}</p>
+                          <p className="mt-1 text-base text-muted-foreground md:text-lg">{t.context}</p>
+                        </footer>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <Button
+              type="button"
+              variant="outline"
+              size="icon"
+              onClick={prev}
+              aria-label="Previous testimonial"
+              className="h-11 w-11 rounded-full border-border/70 bg-background"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
+            <div className="flex items-center gap-2">
+              {TESTIMONIALS.map((t, i) => (
+                <button
+                  key={t.name}
+                  type="button"
+                  onClick={() => goTo(i)}
+                  aria-label={`Show testimonial ${i + 1}`}
+                  className={`h-2.5 rounded-full transition-all ${
+                    i === activeIndex ? "w-8 bg-primary" : "w-3 bg-border hover:bg-muted-foreground/40"
+                  }`}
+                />
+              ))}
+            </div>
+            <Button
+              type="button"
+              variant="outline"
+              size="icon"
+              onClick={next}
+              aria-label="Next testimonial"
+              className="h-11 w-11 rounded-full border-border/70 bg-background"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

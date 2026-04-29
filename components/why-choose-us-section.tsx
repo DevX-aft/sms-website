@@ -52,14 +52,14 @@ export function WhyChooseUsSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <span className="mb-3 block bg-gradient-to-r from-emerald-300 to-teal-400 bg-clip-text text-xl font-semibold uppercase tracking-widest text-transparent">
+          <span className="mb-3 block text-xl font-semibold uppercase tracking-widest text-primary">
             Why Dzidzo SMS
           </span>
           <h2
             className={`text-5xl md:text-7xl font-bold mb-8 tracking-tight
             transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
           >
-            <span className="bg-gradient-to-r from-foreground via-emerald-500 to-teal-500 bg-clip-text text-transparent">
+            <span className="text-foreground">
               Credibility, fit, and value
             </span>
           </h2>

@@ -19,7 +19,7 @@
     --popover: 0 0% 100% / 0.85;
     --popover-foreground: 0 0% 6%;
 
-    --primary: 152 56% 38%;
+    --primary: 156 66% 42%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 150 40% 95%;
@@ -36,9 +36,9 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 152 56% 38%;
+    --ring: 156 66% 42%;
 
-    --chart-1: 152 56% 38%;
+    --chart-1: 156 66% 42%;
     --chart-2: 160 45% 42%;
     --chart-3: 142 40% 36%;
     --chart-4: 43 74% 66%;
@@ -48,12 +48,12 @@
 
     --sidebar-background: 220 16% 98%;
     --sidebar-foreground: 220 7% 26%;
-    --sidebar-primary: 152 56% 38%;
+    --sidebar-primary: 156 66% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 152 20% 92%;
     --sidebar-accent-foreground: 152 56% 32%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 152 56% 38%;
+    --sidebar-ring: 156 66% 42%;
 
     --glass-blur: 24px;
     --glass-bg: 0 0% 100% / 0.85;
@@ -72,7 +72,7 @@
     --popover: 228 16% 10% / 0.85;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 152 52% 46%;
+    --primary: 156 64% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 228 14% 14%;
@@ -89,9 +89,9 @@
 
     --border: 152 15% 18% / 0.45;
     --input: 152 12% 18% / 0.5;
-    --ring: 152 52% 46%;
+    --ring: 156 64% 52%;
 
-    --chart-1: 152 52% 46%;
+    --chart-1: 156 64% 52%;
     --chart-2: 160 50% 45%;
     --chart-3: 142 45% 40%;
     --chart-4: 43 74% 66%;
@@ -101,12 +101,12 @@
 
     --sidebar-background: 228 14% 7%;
     --sidebar-foreground: 220 7% 90%;
-    --sidebar-primary: 152 52% 46%;
+    --sidebar-primary: 156 64% 52%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 228 16% 16%;
     --sidebar-accent-foreground: 152 52% 52%;
     --sidebar-border: 152 15% 18% / 0.45;
-    --sidebar-ring: 152 52% 46%;
+    --sidebar-ring: 156 64% 52%;
 
     --glass-blur: 24px;
     --glass-bg: 228 16% 10% / 0.85;
@@ -125,7 +125,7 @@
     --popover: 0 0% 100% / 0.85;
     --popover-foreground: 0 0% 6%;
 
-    --primary: 152 56% 38%;
+    --primary: 156 66% 42%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 152 20% 92%;
@@ -142,9 +142,9 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 152 56% 38%;
+    --ring: 156 66% 42%;
 
-    --chart-1: 152 56% 38%;
+    --chart-1: 156 66% 42%;
     --chart-2: 160 45% 42%;
     --chart-3: 142 40% 36%;
     --chart-4: 43 74% 66%;
@@ -154,12 +154,12 @@
 
     --sidebar-background: 220 16% 98%;
     --sidebar-foreground: 220 7% 26%;
-    --sidebar-primary: 152 56% 38%;
+    --sidebar-primary: 156 66% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 152 20% 92%;
     --sidebar-accent-foreground: 152 56% 32%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 152 56% 38%;
+    --sidebar-ring: 156 66% 42%;
 
     --glass-blur: 24px;
     --glass-bg: 0 0% 100% / 0.85;
@@ -212,7 +212,7 @@
   [type="submit"],
   [role="button"] {
     @apply transition-colors duration-150;
-    background: linear-gradient(90deg, hsl(152 52% 44%) 0%, hsl(152 56% 40%) 100%);
+    background: linear-gradient(90deg, hsl(156 66% 44%) 0%, hsl(156 70% 40%) 100%);
     color: hsl(var(--primary-foreground));
     box-shadow: var(--shadow-sm);
     border-radius: var(--radius);
@@ -229,7 +229,7 @@
   [type="button"]:focus-visible,
   [type="submit"]:focus-visible,
   [role="button"]:focus-visible {
-    background: linear-gradient(90deg, hsl(152 52% 50%) 0%, hsl(152 56% 42%) 100%);
+    background: linear-gradient(90deg, hsl(156 66% 52%) 0%, hsl(156 70% 46%) 100%);
     box-shadow: var(--shadow-md);
     color: hsl(var(--primary-foreground));
   }

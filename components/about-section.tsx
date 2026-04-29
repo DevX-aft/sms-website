@@ -63,11 +63,11 @@ export function AboutSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <span className="bg-gradient-to-r from-foreground via-emerald-500 to-teal-500 bg-clip-text text-transparent animate-fade-in-up mb-2 inline-block leading-snug">
+            <span className="mb-2 inline-block leading-snug text-foreground">
               Built for our schools,
             </span>
             <br />
-            <span className="bg-gradient-to-r from-emerald-500 via-teal-500 to-foreground bg-clip-text text-transparent animate-fade-in-up animation-delay-200">
+            <span className="text-foreground">
               by those who know them best
             </span>
           </h2>

@@ -103,7 +103,7 @@ export function SolutionsSection() {
   ]
 
   return (
-    <section ref={sectionRef} id="features" className="py-32 bg-white relative">
+    <section ref={sectionRef} id="features" className="relative border-y border-border/40 bg-muted/50 py-32">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
           <span className="text-emerald-400 text-base font-semibold tracking-wider uppercase md:text-lg">Key features</span>
@@ -112,11 +112,11 @@ export function SolutionsSection() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <span className="bg-gradient-to-r from-foreground via-emerald-500 to-teal-500 bg-clip-text text-transparent leading-snug mb-2 inline-block">
+            <span className="mb-2 inline-block leading-snug text-foreground">
               Everything your school
             </span>
             <br />
-            <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
+            <span className="text-foreground">
               needs in one system
             </span>
           </h2>

@@ -44,7 +44,7 @@ export function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="py-20 bg-background min-h-screen flex items-center"
+      className="py-20 bg-white min-h-screen flex items-center"
     >
       <div className="container mx-auto px-6 max-w-4xl w-full">
         <div className="text-center mb-16">

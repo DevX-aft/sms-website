@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Mail, Phone, Globe } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
@@ -56,6 +57,13 @@ export function ContactSection() {
             Contact us
           </h2>
           <p
+            className={`mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary transition-all duration-700 delay-75 md:text-base ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            Afrainity Technologies · Harare Institute of Technology startup
+          </p>
+          <p
             className={`mx-auto max-w-2xl text-xl leading-relaxed text-muted-foreground transition-all duration-700 delay-150 md:text-2xl ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
@@ -65,22 +73,43 @@ export function ContactSection() {
         </div>
 
         <div
-          className={`flex items-center justify-center mb-12 transition-all duration-700 delay-200 ${
+          className={`mx-auto mb-12 grid max-w-3xl gap-6 sm:grid-cols-2 sm:items-stretch transition-all duration-700 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="flex items-center space-x-4 bg-card/80 border border-border rounded-lg p-4 max-w-lg">
-            <div
-              className="h-12 w-12 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white font-bold text-lg shrink-0"
-              aria-hidden
-            >
-              HIT
+          <a
+            href="https://www.afrainity.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex h-full min-h-0 flex-col items-center rounded-2xl border border-border bg-card/80 px-6 py-10 text-center shadow-sm transition-all hover:border-emerald-500/35 hover:bg-accent/30 hover:shadow-md"
+          >
+            <div className="flex w-full flex-1 flex-col items-center justify-center">
+              <Image
+                src="/AFT-blue-logo.png"
+                alt="Afrainity Technologies"
+                width={770}
+                height={308}
+                className="h-[12.25rem] w-auto max-w-full object-contain opacity-95 transition-opacity group-hover:opacity-100 md:h-56"
+              />
             </div>
-            <div className="text-foreground text-left">
-              <p className="text-base font-medium text-muted-foreground">Proudly incubated by</p>
-              <p className="text-xl font-bold md:text-2xl">Harare Institute of Technology</p>
-              <p className="mt-1 text-base text-muted-foreground md:text-lg">Innovation Hub — Belvedere, Harare</p>
+            <p className="mt-4 w-full max-w-sm shrink-0 text-sm font-medium leading-snug text-muted-foreground">
+              Afrainity Technologies
+            </p>
+          </a>
+
+          <div className="flex h-full min-h-0 flex-col items-center rounded-2xl border border-border bg-card/80 px-6 py-10 text-center shadow-sm">
+            <div className="flex w-full flex-1 flex-col items-center justify-center">
+              <Image
+                src="/hitlogo.png"
+                alt="Harare Institute of Technology — success through innovation"
+                width={320}
+                height={160}
+                className="h-auto w-full max-w-[260px] object-contain md:max-w-[280px]"
+              />
             </div>
+            <p className="mt-4 w-full max-w-sm shrink-0 text-sm font-medium leading-snug text-muted-foreground text-balance">
+              Proudly incubated by the Innovation Hub — Belvedere, Harare
+            </p>
           </div>
         </div>
 

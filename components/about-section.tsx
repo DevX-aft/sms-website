@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { School, UsersRound, FileCheck } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
@@ -80,6 +81,37 @@ export function AboutSection() {
             of school life. With the upcoming Finance module, paying fees will be as simple as sending
             a WhatsApp message.
           </p>
+        </div>
+
+        <div
+          className={`mb-20 grid items-center gap-10 lg:grid-cols-12 lg:gap-14 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          } transition-all duration-1000 delay-150`}
+        >
+          <div className="relative lg:col-span-7">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-emerald-200/50 bg-muted shadow-[0_24px_48px_-20px_rgb(16_24_40_/_0.2)] sm:aspect-[16/9]">
+              <Image
+                src="/dzidzopic2.png"
+                alt="Teacher and student reviewing an English textbook together in class"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 1024px) 58vw, 100vw"
+              />
+            </div>
+            <div
+              className="pointer-events-none absolute -bottom-6 -left-6 -z-10 h-36 w-36 rounded-full bg-emerald-400/20 blur-3xl"
+              aria-hidden
+            />
+          </div>
+          <div className="lg:col-span-5">
+            <p className="text-left text-2xl font-semibold leading-snug tracking-tight text-foreground md:text-3xl">
+              Software should match the care you see in the classroom every day.
+            </p>
+            <p className="mt-5 text-left text-lg leading-relaxed text-muted-foreground md:text-xl">
+              Dzidzo SMS is shaped around real conversations between
+              staff, students, and families, not generic templates imported from somewhere else.
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-20">

@@ -24,38 +24,36 @@ export function HeroSection() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent" aria-hidden />
 
       <div className="container relative z-10 mx-auto px-4 py-16 md:py-24">
-        <div className="mx-auto flex max-w-4xl flex-col gap-6 md:flex-row md:items-start md:gap-6 lg:max-w-5xl">
-          <div className="flex shrink-0 justify-center md:-mr-1 md:justify-start md:pt-1">
-            <Image
-              src="/Dzidzo SMS2.png"
-              alt="Dzidzo SMS"
-              width={176}
-              height={176}
-              className="h-36 w-36 rounded-2xl md:h-44 md:w-44"
-              priority
-            />
-          </div>
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 lg:max-w-7xl lg:flex-row lg:items-center lg:gap-14 xl:gap-16">
+          <div className="flex min-w-0 flex-1 flex-col gap-6">
+            <div className="flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-center lg:justify-start lg:gap-6">
+              <div className="flex shrink-0 justify-center">
+                <Image
+                  src="/Dzidzo SMS2.png"
+                  alt="Dzidzo SMS"
+                  width={176}
+                  height={176}
+                  className="h-32 w-32 rounded-2xl md:h-40 md:w-40"
+                  priority
+                />
+              </div>
+              <h1 className="text-balance text-center font-bold tracking-tight text-foreground sm:min-w-0 sm:flex-1 sm:text-left lg:text-left">
+                <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+                  Dzidzo SMS
+                </span>
+                <span className="mt-3 block text-3xl font-semibold leading-snug text-muted-foreground sm:text-4xl md:text-5xl">
+                  School management software built with Zimbabwean schools
+                </span>
+              </h1>
+            </div>
 
-          <div className="flex-1 text-center md:text-left">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
-              Afrainity Technologies · Harare Institute of Technology startup
-            </p>
-
-            <h1 className="text-balance font-bold tracking-tight text-foreground">
-              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-                Dzidzo SMS
-              </span>
-              <span className="mt-3 block text-3xl font-semibold leading-snug text-muted-foreground sm:text-4xl md:text-5xl">
-                School management software built with Zimbabwean schools
-              </span>
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:mx-0 md:text-xl">
+            <div className="text-center lg:text-left">
+            <p className="mx-auto mt-0 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:mx-0 md:text-xl">
               Admissions, timetables, exams, staff workflows, and parent communication on WhatsApp —
               designed for low-bandwidth environments and day-to-day school operations.
             </p>
 
-            <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
+            <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
               <Button asChild size="lg" className="h-14 px-10 text-lg font-semibold">
                 <Link href="/demo">Book a demo</Link>
               </Button>
@@ -84,6 +82,32 @@ export function HeroSection() {
                 sales@afrainity.com
               </a>
             </p>
+            </div>
+          </div>
+
+          <div className="relative w-full shrink-0 lg:w-[min(44%,520px)]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-primary/15 bg-muted shadow-[0_32px_64px_-24px_rgb(16_24_40_/_0.35)] sm:aspect-[5/6] md:rounded-[2.25rem] lg:aspect-[3/4]">
+              <Image
+                src="/dzidzopic1.png"
+                alt="Zimbabwean secondary students in uniform celebrating together in a classroom"
+                fill
+                className="object-cover object-[center_25%]"
+                sizes="(min-width: 1024px) 520px, 100vw"
+                priority
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent lg:from-background/50"
+                aria-hidden
+              />
+            </div>
+            <div
+              className="pointer-events-none absolute -bottom-4 -right-4 -z-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl"
+              aria-hidden
+            />
+            <div
+              className="pointer-events-none absolute -left-6 top-1/4 -z-10 h-32 w-32 rounded-full bg-teal-400/15 blur-2xl"
+              aria-hidden
+            />
           </div>
         </div>
       </div>

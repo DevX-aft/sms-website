@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import {
   ShieldCheck,
   DeviceMobile,
@@ -129,6 +130,39 @@ export function SolutionsSection() {
             Full support for ZIMSEC, Cambridge, and HEXCO — with an intuitive interface so teachers
             and admins focus on what matters.
           </p>
+        </div>
+
+        <div
+          className={`mb-20 grid items-center gap-10 lg:grid-cols-12 lg:gap-12 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          } transition-all duration-1000 delay-200`}
+        >
+          <div className="space-y-4 lg:col-span-4">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+              On the ground
+            </span>
+            <h3 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
+              Built for focused teaching and calm administration
+            </h3>
+            <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
+              Dzidzo ties everyday teaching to the systems that support it, so nothing falls through the cracks.
+            </p>
+          </div>
+          <div className="relative lg:col-span-8">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-emerald-100 bg-white shadow-[0_28px_56px_-24px_rgb(16_24_40_/_0.22)] sm:aspect-[2/1]">
+              <Image
+                src="/dzidzopic3.png"
+                alt="Two secondary students working attentively at their desks in a classroom"
+                fill
+                className="object-cover object-[center_40%]"
+                sizes="(min-width: 1024px) 66vw, 100vw"
+              />
+              <div
+                className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/[0.04]"
+                aria-hidden
+              />
+            </div>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">

@@ -42,15 +42,15 @@ export function HeroSection() {
                   Dzidzo SMS
                 </span>
                 <span className="mt-3 block text-3xl font-semibold leading-snug text-muted-foreground sm:text-4xl md:text-5xl">
-                  School management software built with Zimbabwean schools
+                  School management system by Afrainity Technologies
                 </span>
               </h1>
             </div>
 
             <div className="text-center lg:text-left">
             <p className="mx-auto mt-0 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:mx-0 md:text-xl">
-              Admissions, timetables, exams, staff workflows, and parent communication on WhatsApp —
-              designed for low-bandwidth environments and day-to-day school operations.
+              Admissions, timetables, exams, staff workflows, and parent communication on WhatsApp. 
+              Designed for low-bandwidth environments and day-to-day school operations.
             </p>
 
             <div className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">

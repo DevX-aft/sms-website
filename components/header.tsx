@@ -95,14 +95,14 @@ export function Header() {
       }}
       role="banner"
     >
-      <div className="container mx-auto px-4 h-full flex items-center justify-between">
+      <div className="container mx-auto flex h-full min-w-0 items-center justify-between gap-4 px-4 xl:gap-6">
         <Link
           href="/"
           aria-label="Dzidzo SMS Home"
-          className="group relative flex items-center gap-1.5"
+          className="group relative flex shrink-0 items-center gap-1.5"
         >
           <div
-            className="relative transition-transform duration-300 ease-out"
+            className="relative shrink-0 transition-transform duration-300 ease-out"
             style={{ transform: `scale(${logoScale})` }}
           >
             <Image
@@ -120,63 +120,65 @@ export function Header() {
             style={{
               opacity: textOpacity,
               transform: `translateX(${Math.max(-20, -scrollY / 10)}px)`,
-              maxWidth: textOpacity > 0.1 ? "280px" : "0px",
+              maxWidth: textOpacity > 0.1 ? "320px" : "0px",
             }}
           >
             Dzidzo SMS
           </span>
         </Link>
 
-        <nav
-          className="hidden md:flex items-center gap-6 lg:gap-8"
-          role="navigation"
-          aria-label="Main navigation"
-        >
-          {NAV_LINKS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`relative rounded py-2 text-lg text-muted-foreground transition-colors duration-200 group hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500
-                ${item.href.endsWith(currentHash) ? "text-emerald-600 font-semibold" : ""}
-              `}
-            >
-              {item.label}
-              <span
-                className={`
-                  pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full
-                  group-hover:w-full group-focus:w-full transition-all duration-300
-                  ${item.href.endsWith(currentHash) ? "w-full" : ""}
+        <div className="hidden shrink-0 items-center gap-4 xl:flex 2xl:gap-8">
+          <nav
+            className="flex items-center gap-5 2xl:gap-8"
+            role="navigation"
+            aria-label="Main navigation"
+          >
+            {NAV_LINKS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative rounded py-2 text-base text-muted-foreground transition-colors duration-200 group hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500
+                  ${item.href.endsWith(currentHash) ? "text-emerald-600 font-semibold" : ""}
                 `}
-                aria-hidden="true"
-              />
-            </Link>
-          ))}
-        </nav>
+              >
+                {item.label}
+                <span
+                  className={`
+                    pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full
+                    group-hover:w-full group-focus:w-full transition-all duration-300
+                    ${item.href.endsWith(currentHash) ? "w-full" : ""}
+                  `}
+                  aria-hidden="true"
+                />
+              </Link>
+            ))}
+          </nav>
 
-        <div className="hidden md:flex items-center gap-2 lg:gap-3 shrink-0">
-          {LOGIN_URL ? (
-            <Button variant="ghost" size="sm" className="text-base text-muted-foreground hover:text-foreground" asChild>
-              <a href={LOGIN_URL} target="_blank" rel="noopener noreferrer">
-                Log in
-              </a>
+          <div className="flex items-center gap-2 lg:gap-3">
+            {LOGIN_URL ? (
+              <Button variant="ghost" size="sm" className="text-base text-muted-foreground hover:text-foreground" asChild>
+                <a href={LOGIN_URL} target="_blank" rel="noopener noreferrer">
+                  Log in
+                </a>
+              </Button>
+            ) : (
+              <Button variant="ghost" size="sm" className="text-base text-muted-foreground hover:text-foreground" asChild>
+                <Link href="/#contact">Request access</Link>
+              </Button>
+            )}
+            <Button variant="outline" size="sm" className="border-primary/40 bg-transparent text-base text-foreground hover:bg-accent" asChild>
+              <Link href="/#contact">Get a quote</Link>
             </Button>
-          ) : (
-            <Button variant="ghost" size="sm" className="text-base text-muted-foreground hover:text-foreground" asChild>
-              <Link href="/#contact">Request access</Link>
+            <Button size="sm" className="text-base font-semibold" asChild>
+              <Link href="/demo">Book a demo</Link>
             </Button>
-          )}
-          <Button variant="outline" size="sm" className="border-primary/40 bg-transparent text-base text-foreground hover:bg-accent" asChild>
-            <Link href="/#contact">Get a quote</Link>
-          </Button>
-          <Button size="sm" className="text-base font-semibold" asChild>
-            <Link href="/demo">Book a demo</Link>
-          </Button>
+          </div>
         </div>
 
         <button
           ref={menuButtonRef}
           type="button"
-          className="md:hidden inline-flex items-center justify-center p-2 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 transition-colors"
+          className="inline-flex shrink-0 items-center justify-center rounded-lg p-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 xl:hidden"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-controls="mobile-nav"
           aria-expanded={isMenuOpen}
@@ -197,7 +199,7 @@ export function Header() {
         role="navigation"
         aria-label="Mobile main navigation"
         className={`
-          md:hidden fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-2xl border-b border-border
+          xl:hidden fixed inset-x-0 top-0 z-40 bg-white/95 backdrop-blur-2xl border-b border-border
           transition-all duration-300 ease-in-out
           ${isMenuOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-8 opacity-0 pointer-events-none"}
         `}
@@ -208,7 +210,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded px-2 py-3 text-xl text-muted-foreground transition-colors duration-200 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              className="rounded px-2 py-3 text-lg text-muted-foreground transition-colors duration-200 hover:text-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
               tabIndex={isMenuOpen ? 0 : -1}
               onClick={() => setIsMenuOpen(false)}
             >
